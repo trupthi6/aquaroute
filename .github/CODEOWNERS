@@ -1,0 +1,15 @@
+# Replace @m1..@m6 with real GitHub handles.
+*                                  @m1
+/docs/                             @m1
+/.github/                          @m1
+/backend/app/services/risk/        @m2
+/data/scenarios/                   @m2
+/frontend/src/offline/             @m3
+/data/pilot/                       @m4
+/tools/                            @m4
+/backend/app/services/routing/     @m4
+/backend/app/routers/              @m5
+/backend/app/core/                 @m5
+/backend/app/services/incidents/   @m5
+/frontend/src/pages/responder/     @m6
+/backend/tests/                    @m6

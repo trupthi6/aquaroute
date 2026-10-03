@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.pytest_cache/
+.ruff_cache/
+node_modules/
+dist/
+# Firebase service-account keys: NEVER commit
+serviceAccount*.json
+*-firebase-adminsdk-*.json
