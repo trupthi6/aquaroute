@@ -15,6 +15,7 @@ vi.mock("./components/map/RiskMap", () => ({
 vi.mock("./api/client", async (orig) => ({
   ...(await orig<typeof import("./api/client")>()),
   fetchRisk: vi.fn(), fetchScenario: vi.fn(), fetchDetail: vi.fn(), postScenario: vi.fn(),
+  postRoute: vi.fn(), fetchDemoTrip: vi.fn(),
 }));
 import * as api from "./api/client";
 const mocked = vi.mocked(api);

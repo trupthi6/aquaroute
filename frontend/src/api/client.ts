@@ -1,4 +1,4 @@
-import type { RiskCollection, RiskDetailProperties, RiskFeature, ScenarioState, ScenarioUpdate } from "./types";
+import type { DemoTripResponse, RiskCollection, RiskDetailProperties, RiskFeature, RouteRequest, RouteResponse, ScenarioState, ScenarioUpdate } from "./types";
 
 // Empty in dev (Vite proxies /api to FastAPI). Set VITE_API_BASE when hosted separately.
 const BASE = (import.meta.env.VITE_API_BASE as string | undefined) ?? "";
@@ -40,3 +40,11 @@ export const postScenario = (body: ScenarioUpdate) =>
     headers: { "content-type": "application/json" },
     body: JSON.stringify(body),
   });
+export const postRoute = (body: RouteRequest) =>
+  request<RouteResponse>("/api/v1/route", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(body),
+  });
+export const fetchDemoTrip = (view: "peak" | "now" = "peak") =>
+  request<DemoTripResponse>(`/api/v1/route/demo-trip?view=${view}`);

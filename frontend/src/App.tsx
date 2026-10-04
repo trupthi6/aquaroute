@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ApiError, fetchDetail } from "./api/client";
-import type { RiskDetailProperties, ViewMode } from "./api/types";
+import type { RiskDetailProperties, RouteResponse, ViewMode } from "./api/types";
 import DemoPanel from "./components/DemoPanel";
 import FreshnessBanner from "./components/FreshnessBanner";
 import Legend from "./components/Legend";
 import RiskMap from "./components/map/RiskMap";
+import RoutePanel from "./components/RoutePanel";
 import SegmentPanel from "./components/SegmentPanel";
 import SummaryBar from "./components/SummaryBar";
 import TopRisks from "./components/TopRisks";
@@ -18,6 +19,7 @@ export default function App() {
   const [view, setView] = useState<ViewMode>("peak");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [detail, setDetail] = useState<RiskDetailProperties | null>(null);
+  const [routeResult, setRouteResult] = useState<RouteResponse | null>(null);
   const detailSeq = useRef(0);
 
   // Re-fetch the selected road whenever the risk data refreshes, so the panel never goes stale.
@@ -62,7 +64,7 @@ export default function App() {
         <section className="map-wrap" aria-label="Flood risk map">
           <ViewToggle view={view} onChange={setView} />
           {risk ? (
-            <RiskMap data={risk} view={view} selectedId={selectedId} onSelect={setSelectedId} />
+            <RiskMap data={risk} view={view} selectedId={selectedId} onSelect={setSelectedId} routeResult={routeResult} />
           ) : (
             <div className="placeholder">{loading ? "Loading flood risk…" : "No data available."}</div>
           )}
@@ -70,6 +72,7 @@ export default function App() {
         </section>
 
         <aside className="side">
+          <RoutePanel view={view} onRouteResult={setRouteResult} />
           {detail && <SegmentPanel detail={detail} onClose={() => setSelectedId(null)} />}
           {risk && (
             <SummaryBar

@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import type { RiskCollection, RiskDetailProperties, RiskFeature, ScenarioState } from "../api/types";
+import type { DemoTripResponse, RiskCollection, RiskDetailProperties, RiskFeature, RouteResponse, ScenarioState } from "../api/types";
 
 // Shared with the backend: data/fixtures/*.sample.json (regenerate with tools/export_fixtures.py)
 // Vitest runs with cwd = frontend/, so the shared fixtures live one level up.
@@ -9,6 +9,12 @@ const load = (name: string) =>
 
 export const riskFixture = load("risk_response.sample.json") as RiskCollection;
 export const detailFixture = load("risk_detail.sample.json") as RiskFeature<RiskDetailProperties>;
+export const routeFixture = load("route_response.sample.json") as RouteResponse;
+export const demoTripFixture: DemoTripResponse = {
+  origin: { lat: 12.915, lon: 77.6725 },
+  destination: { lat: 12.9215, lon: 77.6465 },
+  note: "Fastest route crosses Agara Underpass (sample) (HIGH), but a safer alternative is available.",
+};
 export const scenarioFixture: ScenarioState = {
   scenario: "heavy_rain",
   description: "Intense cloudburst-style event peaking around +240 min.",

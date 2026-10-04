@@ -99,3 +99,69 @@ export interface ScenarioUpdate {
   now_offset_min?: number;
   rain_data_age_min?: number;
 }
+
+// ── Module 3: Routing ──────────────────────────────────────────────────────
+
+export interface LatLng {
+  lat: number;
+  lon: number;
+}
+
+export interface SnappedPoint extends LatLng {
+  snapped_lat: number;
+  snapped_lon: number;
+  snap_distance_m: number;
+}
+
+export interface SegmentAtRisk {
+  segment_id: string;
+  name: string;
+  risk_class: RiskClass;
+  risk_probability: number;
+}
+
+export interface Route {
+  segment_ids: string[];
+  geometry: { type: "LineString"; coordinates: [number, number][] };
+  distance_m: number;
+  duration_s: number;
+  mean_risk: number;
+  max_risk_class: RiskClass;
+  segments_at_risk: SegmentAtRisk[];
+  cost: number;
+}
+
+export interface RouteComparison {
+  extra_time_s: number;
+  extra_distance_m: number;
+  high_risk_roads_avoided: number;
+  critical_roads_avoided: number;
+  mean_risk_reduction: number;
+}
+
+export interface RouteResponse {
+  status: "OK" | "NO_SAFE_ROUTE";
+  recommendation: "FASTER_IS_SAFE" | "FASTEST_IS_SAFE" | "SAFER_ROUTE" | "NO_SAFE_ROUTE";
+  view: ViewMode;
+  origin: SnappedPoint;
+  destination: SnappedPoint;
+  fastest: Route;
+  safest: Route | null;
+  comparison: RouteComparison | null;
+  reasons: string[];
+  warnings: string[];
+  metadata: Record<string, unknown>;
+}
+
+export interface RouteRequest {
+  origin: LatLng;
+  destination: LatLng;
+  view?: ViewMode;
+  blocked_segment_ids?: string[];
+}
+
+export interface DemoTripResponse {
+  origin: LatLng;
+  destination: LatLng;
+  note: string;
+}

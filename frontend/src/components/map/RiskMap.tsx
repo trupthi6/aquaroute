@@ -2,18 +2,20 @@ import type { Feature } from "geojson";
 import type { Layer } from "leaflet";
 import { useMemo } from "react";
 import { GeoJSON, MapContainer, Pane, Polyline, TileLayer } from "react-leaflet";
-import type { RiskCollection, RiskProperties, ViewMode } from "../../api/types";
+import type { RiskCollection, RiskProperties, RouteResponse, ViewMode } from "../../api/types";
 import { computeBounds, toLatLng } from "../../lib/geo";
 import { CLASS_STYLE, classFor, probabilityFor, segmentStyle } from "../../lib/risk";
+import RouteLayer from "./RouteLayer";
 
 interface Props {
   data: RiskCollection;
   view: ViewMode;
   selectedId: string | null;
   onSelect: (id: string) => void;
+  routeResult?: RouteResponse | null;
 }
 
-export default function RiskMap({ data, view, selectedId, onSelect }: Props) {
+export default function RiskMap({ data, view, selectedId, onSelect, routeResult = null }: Props) {
   // Bounds are only used for the initial view (MapContainer props are fixed after mount).
   const bounds = useMemo(() => computeBounds(data.features), [data.features.length]); // eslint-disable-line react-hooks/exhaustive-deps
   const selected = data.features.find((f) => f.id === selectedId);
@@ -45,6 +47,7 @@ export default function RiskMap({ data, view, selectedId, onSelect }: Props) {
           onEachFeature={onEachFeature}
         />
       </Pane>
+      <RouteLayer routeResult={routeResult} />
     </MapContainer>
   );
 }
