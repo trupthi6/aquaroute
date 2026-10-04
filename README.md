@@ -2,7 +2,7 @@
 
 AI-powered urban flood nowcasting, offline safe navigation and SOS coordination (SIH26085).
 
-**Status:** Module 1 (Flood Risk Engine) complete. Modules 2-6 are not started.
+**Status:** Module 1 (Flood Risk Engine) and Module 2 (Flood Risk Map) complete. Modules 3-6 are not started.
 
 ## Run Module 1 (clean clone)
 
@@ -13,6 +13,21 @@ pip install -r requirements-dev.txt
 pytest -q                                             # expect: 38 passed
 uvicorn app.main:app --reload                         # http://localhost:8000/docs
 ```
+
+## Run Module 2 (map UI) - needs Node 20+
+
+```bash
+# terminal 1: backend (see above)  ->  uvicorn app.main:app --reload
+# terminal 2:
+cd frontend
+npm install
+npm test                 # expect: 49 passed
+npm run build            # typecheck + production build + PWA manifest/service worker
+npm run dev              # http://localhost:5173  (proxies /api to :8000)
+```
+
+Demo flow: Peak view shows early warnings -> pick `heavy_rain` -> drag the time slider to ~+240 -> the underpass turns
+HIGH -> click it for reasons, confidence and the 3 h curve -> tick "Simulate stale rain data" -> red STALE banner.
 
 ## 60-second demo of the risk engine
 
