@@ -136,6 +136,6 @@ if __name__ == "__main__":
     (ROOT / "data/pilot").mkdir(parents=True, exist_ok=True)
     (ROOT / "data/scenarios").mkdir(parents=True, exist_ok=True)
     seg = build_segments()
-    (ROOT / "data/pilot/segments.geojson").write_text(json.dumps(seg, indent=1))
+    (ROOT / "data/pilot/segments_sample.geojson").write_text(json.dumps(seg, indent=1))
     (ROOT / "data/scenarios/rain_scenarios.json").write_text(json.dumps(build_scenarios()))
     print(f"wrote {len(seg['features'])} segments and {len(build_scenarios()["scenarios"])} scenarios")

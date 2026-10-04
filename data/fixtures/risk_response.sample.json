@@ -7,7 +7,7 @@
   "simulated_now": "2026-10-03T17:30:00+05:30",
   "now_offset_min": 210,
   "horizon_min": 180,
-  "generated_at": "2026-10-03T16:20:46.983106+00:00",
+  "generated_at": "2026-10-04T03:55:31.274728+00:00",
   "segment_count": 38,
   "summary_now": {
    "LOW": 23,
@@ -19,7 +19,13 @@
    "MEDIUM": 23,
    "HIGH": 13
   },
-  "disclaimer": "Risk estimate for decision support; an uncalibrated index, not a guarantee."
+  "disclaimer": "Risk estimate for decision support; an uncalibrated index, not a guarantee.",
+  "dataset": {
+   "name": "sample",
+   "synthetic": true,
+   "source": "Synthetic sample catchment for AquaRoute Module 1. Not real survey data.",
+   "notes": "Synthetic sample catchment for AquaRoute Module 1. Not real survey data."
+  }
  },
  "features": [
   {

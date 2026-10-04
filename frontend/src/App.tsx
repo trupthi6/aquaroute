@@ -38,12 +38,14 @@ export default function App() {
 
   const top = useMemo(() => (risk ? topRisks(risk.features, view) : []), [risk, view]);
   const freshness = risk ? mapFreshness(risk) : null;
+  const isSynthetic = risk?.metadata.dataset ? risk.metadata.dataset.synthetic : true;
+  const datasetTag = isSynthetic ? "SAMPLE DATA" : "PILOT DATA - OSM roads, proxy drainage";
 
   return (
     <div className="app">
       <header className="topbar">
         <h1>AquaRoute</h1>
-        <span className="tag">Street-level flood risk · next 0-3 h · SAMPLE DATA</span>
+        <span className="tag">Street-level flood risk · next 0-3 h · {datasetTag}</span>
       </header>
 
       {error && (

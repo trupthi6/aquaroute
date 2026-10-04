@@ -19,6 +19,13 @@ class Freshness(BaseModel):
     state: Literal["fresh", "aging", "stale"]
 
 
+class DatasetMetadata(BaseModel):
+    name: str
+    synthetic: bool
+    source: str
+    notes: str = ""
+
+
 class RiskProperties(BaseModel):
     segment_id: str
     name: str

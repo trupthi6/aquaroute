@@ -25,15 +25,25 @@ class SegmentNotFound(KeyError):
 
 class RiskService:
     def __init__(self, segment_features: list[dict], player: ScenarioPlayer,
-                 model: RiskModel | None = None, reports_provider: ReportsProvider | None = None):
+                 model: RiskModel | None = None, reports_provider: ReportsProvider | None = None,
+                 dataset_meta: dict | None = None):
         self._geo = {f["properties"]["segment_id"]: f for f in segment_features}
         self._static = build_static_features(segment_features)
         self.player = player
         self.model = model or RuleBasedModel()
         self.reports_provider: ReportsProvider = reports_provider or (lambda: {})
         self.reports_version = 0  # Module 5 bumps this when reports change
+        self.dataset_meta = dataset_meta or {
+            "name": "sample",
+            "synthetic": True,
+            "source": "Synthetic sample catchment for AquaRoute Module 1. Not real survey data.",
+            "notes": "Synthetic sample catchment for AquaRoute Module 1. Not real survey data.",
+        }
         self._cache_key: tuple | None = None
         self._cache: dict[str, Assessment] = {}
+
+    def static_features(self) -> dict:
+        return self._static
 
     # ---------------------------------------------------------------- core --
     def assess_all(self) -> dict[str, Assessment]:
@@ -94,6 +104,7 @@ class RiskService:
                 "summary_now": {k: now_levels.get(k, 0) for k in ("LOW", "MEDIUM", "HIGH")},
                 "summary_peak": {k: peak_levels.get(k, 0) for k in ("LOW", "MEDIUM", "HIGH")},
                 "disclaimer": "Risk estimate for decision support; an uncalibrated index, not a guarantee.",
+                "dataset": self.dataset_meta,
             },
             "features": feats,
         }

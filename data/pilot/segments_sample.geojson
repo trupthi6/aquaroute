@@ -1,0 +1,1150 @@
+{
+ "type": "FeatureCollection",
+ "metadata": {
+  "synthetic": true,
+  "note": "Synthetic sample catchment for AquaRoute Module 1. Not real survey data.",
+  "crs": "EPSG:4326"
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.64,
+      12.915
+     ],
+     [
+      77.6465,
+      12.915
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-001",
+    "name": "Sample Road R-001",
+    "kind": "residential",
+    "from_node": "N00",
+    "to_node": "N10",
+    "is_low_point": false,
+    "history_score": 0.0,
+    "drain_distance_m": 125,
+    "drain_capacity_mm_hr": 27,
+    "elevation_m": 911.3,
+    "length_m": 704,
+    "water_distance_m": 4353
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6465,
+      12.915
+     ],
+     [
+      77.653,
+      12.915
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-002",
+    "name": "Sample Road R-002",
+    "kind": "residential",
+    "from_node": "N10",
+    "to_node": "N20",
+    "is_low_point": false,
+    "history_score": 0.17,
+    "drain_distance_m": 317,
+    "drain_capacity_mm_hr": 24,
+    "elevation_m": 909.8,
+    "length_m": 704,
+    "water_distance_m": 3792
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.653,
+      12.915
+     ],
+     [
+      77.6595,
+      12.915
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-003",
+    "name": "Sample Road R-003",
+    "kind": "residential",
+    "from_node": "N20",
+    "to_node": "N30",
+    "is_low_point": false,
+    "history_score": 0.07,
+    "drain_distance_m": 108,
+    "drain_capacity_mm_hr": 34,
+    "elevation_m": 907.9,
+    "length_m": 704,
+    "water_distance_m": 3288
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6595,
+      12.915
+     ],
+     [
+      77.666,
+      12.915
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-004",
+    "name": "Sample Road R-004",
+    "kind": "residential",
+    "from_node": "N30",
+    "to_node": "N40",
+    "is_low_point": false,
+    "history_score": 0.22,
+    "drain_distance_m": 241,
+    "drain_capacity_mm_hr": 35,
+    "elevation_m": 906.0,
+    "length_m": 704,
+    "water_distance_m": 2868
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.666,
+      12.915
+     ],
+     [
+      77.6725,
+      12.915
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-005",
+    "name": "Sample Road R-005",
+    "kind": "residential",
+    "from_node": "N40",
+    "to_node": "N50",
+    "is_low_point": false,
+    "history_score": 0.41,
+    "drain_distance_m": 291,
+    "drain_capacity_mm_hr": 22,
+    "elevation_m": 904.6,
+    "length_m": 704,
+    "water_distance_m": 2577
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.64,
+      12.9215
+     ],
+     [
+      77.6465,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-006",
+    "name": "Sample Road R-006",
+    "kind": "arterial",
+    "from_node": "N01",
+    "to_node": "N11",
+    "is_low_point": false,
+    "history_score": 0.15,
+    "drain_distance_m": 145,
+    "drain_capacity_mm_hr": 40,
+    "elevation_m": 910.2,
+    "length_m": 704,
+    "water_distance_m": 3990
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6465,
+      12.9215
+     ],
+     [
+      77.653,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-007",
+    "name": "Underpass approach West (sample)",
+    "kind": "arterial",
+    "from_node": "N11",
+    "to_node": "N21",
+    "is_low_point": false,
+    "history_score": 0.6,
+    "drain_distance_m": 140,
+    "drain_capacity_mm_hr": 26,
+    "elevation_m": 907.3,
+    "length_m": 704,
+    "water_distance_m": 3369
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.653,
+      12.9215
+     ],
+     [
+      77.6595,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-008",
+    "name": "Agara Underpass (sample)",
+    "kind": "underpass",
+    "from_node": "N21",
+    "to_node": "N31",
+    "is_low_point": true,
+    "history_score": 0.9,
+    "drain_distance_m": 180,
+    "drain_capacity_mm_hr": 22,
+    "elevation_m": 902.1,
+    "length_m": 704,
+    "water_distance_m": 2789
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6595,
+      12.9215
+     ],
+     [
+      77.666,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-009",
+    "name": "Underpass approach East (sample)",
+    "kind": "arterial",
+    "from_node": "N31",
+    "to_node": "N41",
+    "is_low_point": false,
+    "history_score": 0.6,
+    "drain_distance_m": 160,
+    "drain_capacity_mm_hr": 26,
+    "elevation_m": 903.7,
+    "length_m": 704,
+    "water_distance_m": 2280
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.666,
+      12.9215
+     ],
+     [
+      77.6725,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-010",
+    "name": "Sample Road R-010",
+    "kind": "arterial",
+    "from_node": "N41",
+    "to_node": "N51",
+    "is_low_point": false,
+    "history_score": 0.46,
+    "drain_distance_m": 307,
+    "drain_capacity_mm_hr": 44,
+    "elevation_m": 903.9,
+    "length_m": 704,
+    "water_distance_m": 1900
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.64,
+      12.927999999999999
+     ],
+     [
+      77.6465,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-011",
+    "name": "Sample Road R-011",
+    "kind": "residential",
+    "from_node": "N02",
+    "to_node": "N12",
+    "is_low_point": false,
+    "history_score": 0.02,
+    "drain_distance_m": 111,
+    "drain_capacity_mm_hr": 29,
+    "elevation_m": 909.0,
+    "length_m": 704,
+    "water_distance_m": 3732
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6465,
+      12.927999999999999
+     ],
+     [
+      77.653,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-012",
+    "name": "Flyover Deck A (sample)",
+    "kind": "flyover",
+    "from_node": "N12",
+    "to_node": "N22",
+    "is_low_point": false,
+    "history_score": 0.0,
+    "drain_distance_m": 30,
+    "drain_capacity_mm_hr": 50,
+    "elevation_m": 912.9,
+    "length_m": 704,
+    "water_distance_m": 3060
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.653,
+      12.927999999999999
+     ],
+     [
+      77.6595,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-013",
+    "name": "Flyover Deck B (sample)",
+    "kind": "flyover",
+    "from_node": "N22",
+    "to_node": "N32",
+    "is_low_point": false,
+    "history_score": 0.0,
+    "drain_distance_m": 30,
+    "drain_capacity_mm_hr": 50,
+    "elevation_m": 911.7,
+    "length_m": 704,
+    "water_distance_m": 2407
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6595,
+      12.927999999999999
+     ],
+     [
+      77.666,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-014",
+    "name": "Sample Road R-014",
+    "kind": "residential",
+    "from_node": "N32",
+    "to_node": "N42",
+    "is_low_point": false,
+    "history_score": 0.55,
+    "drain_distance_m": 241,
+    "drain_capacity_mm_hr": 36,
+    "elevation_m": 903.8,
+    "length_m": 704,
+    "water_distance_m": 1792
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.666,
+      12.927999999999999
+     ],
+     [
+      77.6725,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-015",
+    "name": "Sample Road R-015",
+    "kind": "residential",
+    "from_node": "N42",
+    "to_node": "N52",
+    "is_low_point": false,
+    "history_score": 0.58,
+    "drain_distance_m": 91,
+    "drain_capacity_mm_hr": 31,
+    "elevation_m": 902.1,
+    "length_m": 704,
+    "water_distance_m": 1274
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.64,
+      12.9345
+     ],
+     [
+      77.6465,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-016",
+    "name": "Sample Road R-016",
+    "kind": "residential",
+    "from_node": "N03",
+    "to_node": "N13",
+    "is_low_point": false,
+    "history_score": 0.25,
+    "drain_distance_m": 213,
+    "drain_capacity_mm_hr": 38,
+    "elevation_m": 908.0,
+    "length_m": 704,
+    "water_distance_m": 3604
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6465,
+      12.9345
+     ],
+     [
+      77.653,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-017",
+    "name": "Sample Road R-017",
+    "kind": "residential",
+    "from_node": "N13",
+    "to_node": "N23",
+    "is_low_point": false,
+    "history_score": 0.38,
+    "drain_distance_m": 111,
+    "drain_capacity_mm_hr": 23,
+    "elevation_m": 906.3,
+    "length_m": 704,
+    "water_distance_m": 2903
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.653,
+      12.9345
+     ],
+     [
+      77.6595,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-018",
+    "name": "Sample Road R-018",
+    "kind": "residential",
+    "from_node": "N23",
+    "to_node": "N33",
+    "is_low_point": false,
+    "history_score": 0.33,
+    "drain_distance_m": 105,
+    "drain_capacity_mm_hr": 44,
+    "elevation_m": 904.3,
+    "length_m": 704,
+    "water_distance_m": 2203
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6595,
+      12.9345
+     ],
+     [
+      77.666,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-019",
+    "name": "Sample Road R-019",
+    "kind": "residential",
+    "from_node": "N33",
+    "to_node": "N43",
+    "is_low_point": false,
+    "history_score": 0.4,
+    "drain_distance_m": 243,
+    "drain_capacity_mm_hr": 31,
+    "elevation_m": 903.1,
+    "length_m": 704,
+    "water_distance_m": 1507
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.666,
+      12.9345
+     ],
+     [
+      77.6725,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-020",
+    "name": "Lakeside Road North (sample)",
+    "kind": "lakeside",
+    "from_node": "N43",
+    "to_node": "N53",
+    "is_low_point": false,
+    "history_score": 0.7,
+    "drain_distance_m": 260,
+    "drain_capacity_mm_hr": 24,
+    "elevation_m": 901.5,
+    "length_m": 704,
+    "water_distance_m": 827
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.64,
+      12.915
+     ],
+     [
+      77.64,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-021",
+    "name": "Sample Road R-021",
+    "kind": "residential",
+    "from_node": "N00",
+    "to_node": "N01",
+    "is_low_point": false,
+    "history_score": 0.0,
+    "drain_distance_m": 221,
+    "drain_capacity_mm_hr": 43,
+    "elevation_m": 911.4,
+    "length_m": 723,
+    "water_distance_m": 4467
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.64,
+      12.9215
+     ],
+     [
+      77.64,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-022",
+    "name": "Sample Road R-022",
+    "kind": "residential",
+    "from_node": "N01",
+    "to_node": "N02",
+    "is_low_point": false,
+    "history_score": 0.01,
+    "drain_distance_m": 349,
+    "drain_capacity_mm_hr": 34,
+    "elevation_m": 910.1,
+    "length_m": 723,
+    "water_distance_m": 4177
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.64,
+      12.927999999999999
+     ],
+     [
+      77.64,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-023",
+    "name": "Sample Road R-023",
+    "kind": "residential",
+    "from_node": "N02",
+    "to_node": "N03",
+    "is_low_point": false,
+    "history_score": 0.04,
+    "drain_distance_m": 74,
+    "drain_capacity_mm_hr": 36,
+    "elevation_m": 908.7,
+    "length_m": 723,
+    "water_distance_m": 3998
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6465,
+      12.915
+     ],
+     [
+      77.6465,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-024",
+    "name": "Sample Road R-024",
+    "kind": "residential",
+    "from_node": "N10",
+    "to_node": "N11",
+    "is_low_point": false,
+    "history_score": 0.08,
+    "drain_distance_m": 60,
+    "drain_capacity_mm_hr": 31,
+    "elevation_m": 910.0,
+    "length_m": 723,
+    "water_distance_m": 3859
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6465,
+      12.9215
+     ],
+     [
+      77.6465,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-025",
+    "name": "Sample Road R-025",
+    "kind": "residential",
+    "from_node": "N11",
+    "to_node": "N12",
+    "is_low_point": false,
+    "history_score": 0.16,
+    "drain_distance_m": 341,
+    "drain_capacity_mm_hr": 42,
+    "elevation_m": 909.0,
+    "length_m": 723,
+    "water_distance_m": 3519
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6465,
+      12.927999999999999
+     ],
+     [
+      77.6465,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-026",
+    "name": "Sample Road R-026",
+    "kind": "residential",
+    "from_node": "N12",
+    "to_node": "N13",
+    "is_low_point": false,
+    "history_score": 0.32,
+    "drain_distance_m": 251,
+    "drain_capacity_mm_hr": 34,
+    "elevation_m": 907.0,
+    "length_m": 723,
+    "water_distance_m": 3305
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.653,
+      12.915
+     ],
+     [
+      77.653,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-027",
+    "name": "Sample Road R-027",
+    "kind": "residential",
+    "from_node": "N20",
+    "to_node": "N21",
+    "is_low_point": false,
+    "history_score": 0.25,
+    "drain_distance_m": 75,
+    "drain_capacity_mm_hr": 32,
+    "elevation_m": 908.0,
+    "length_m": 723,
+    "water_distance_m": 3290
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.653,
+      12.9215
+     ],
+     [
+      77.653,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-028",
+    "name": "Sample Road R-028",
+    "kind": "residential",
+    "from_node": "N21",
+    "to_node": "N22",
+    "is_low_point": false,
+    "history_score": 0.4,
+    "drain_distance_m": 312,
+    "drain_capacity_mm_hr": 28,
+    "elevation_m": 907.0,
+    "length_m": 723,
+    "water_distance_m": 2884
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.653,
+      12.927999999999999
+     ],
+     [
+      77.653,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-029",
+    "name": "Sample Road R-029",
+    "kind": "residential",
+    "from_node": "N22",
+    "to_node": "N23",
+    "is_low_point": false,
+    "history_score": 0.22,
+    "drain_distance_m": 323,
+    "drain_capacity_mm_hr": 42,
+    "elevation_m": 905.8,
+    "length_m": 723,
+    "water_distance_m": 2618
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6595,
+      12.915
+     ],
+     [
+      77.6595,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-030",
+    "name": "Sample Road R-030",
+    "kind": "residential",
+    "from_node": "N30",
+    "to_node": "N31",
+    "is_low_point": false,
+    "history_score": 0.33,
+    "drain_distance_m": 229,
+    "drain_capacity_mm_hr": 26,
+    "elevation_m": 906.4,
+    "length_m": 723,
+    "water_distance_m": 2784
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6595,
+      12.9215
+     ],
+     [
+      77.6595,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-031",
+    "name": "Sample Road R-031",
+    "kind": "residential",
+    "from_node": "N31",
+    "to_node": "N32",
+    "is_low_point": false,
+    "history_score": 0.34,
+    "drain_distance_m": 281,
+    "drain_capacity_mm_hr": 34,
+    "elevation_m": 905.6,
+    "length_m": 723,
+    "water_distance_m": 2289
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6595,
+      12.927999999999999
+     ],
+     [
+      77.6595,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-032",
+    "name": "Sample Road R-032",
+    "kind": "residential",
+    "from_node": "N32",
+    "to_node": "N33",
+    "is_low_point": false,
+    "history_score": 0.37,
+    "drain_distance_m": 46,
+    "drain_capacity_mm_hr": 43,
+    "elevation_m": 903.8,
+    "length_m": 723,
+    "water_distance_m": 1944
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.666,
+      12.915
+     ],
+     [
+      77.666,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-033",
+    "name": "Sample Road R-033",
+    "kind": "residential",
+    "from_node": "N40",
+    "to_node": "N41",
+    "is_low_point": false,
+    "history_score": 0.45,
+    "drain_distance_m": 135,
+    "drain_capacity_mm_hr": 23,
+    "elevation_m": 905.3,
+    "length_m": 723,
+    "water_distance_m": 2380
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.666,
+      12.9215
+     ],
+     [
+      77.666,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-034",
+    "name": "Sample Road R-034",
+    "kind": "residential",
+    "from_node": "N41",
+    "to_node": "N42",
+    "is_low_point": false,
+    "history_score": 0.54,
+    "drain_distance_m": 67,
+    "drain_capacity_mm_hr": 33,
+    "elevation_m": 904.1,
+    "length_m": 723,
+    "water_distance_m": 1777
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.666,
+      12.927999999999999
+     ],
+     [
+      77.666,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-035",
+    "name": "Sample Road R-035",
+    "kind": "residential",
+    "from_node": "N42",
+    "to_node": "N43",
+    "is_low_point": false,
+    "history_score": 0.58,
+    "drain_distance_m": 277,
+    "drain_capacity_mm_hr": 25,
+    "elevation_m": 902.3,
+    "length_m": 723,
+    "water_distance_m": 1301
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6725,
+      12.915
+     ],
+     [
+      77.6725,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-036",
+    "name": "Sample Road R-036",
+    "kind": "residential",
+    "from_node": "N50",
+    "to_node": "N51",
+    "is_low_point": false,
+    "history_score": 0.46,
+    "drain_distance_m": 122,
+    "drain_capacity_mm_hr": 42,
+    "elevation_m": 903.4,
+    "length_m": 723,
+    "water_distance_m": 2138
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6725,
+      12.9215
+     ],
+     [
+      77.6725,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-037",
+    "name": "Sample Road R-037",
+    "kind": "residential",
+    "from_node": "N51",
+    "to_node": "N52",
+    "is_low_point": false,
+    "history_score": 0.42,
+    "drain_distance_m": 207,
+    "drain_capacity_mm_hr": 39,
+    "elevation_m": 902.1,
+    "length_m": 723,
+    "water_distance_m": 1437
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6725,
+      12.927999999999999
+     ],
+     [
+      77.6725,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-038",
+    "name": "Lakeside Road East (sample)",
+    "kind": "lakeside",
+    "from_node": "N52",
+    "to_node": "N53",
+    "is_low_point": false,
+    "history_score": 0.7,
+    "drain_distance_m": 300,
+    "drain_capacity_mm_hr": 24,
+    "elevation_m": 900.8,
+    "length_m": 723,
+    "water_distance_m": 776
+   }
+  }
+ ]
+}

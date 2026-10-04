@@ -58,6 +58,12 @@ export interface RiskFeature<P = RiskProperties> {
   properties: P;
 }
 export type LevelCounts = Record<RiskLevel, number>;
+export interface DatasetMetadata {
+  name: string;
+  synthetic: boolean;
+  source: string;
+  notes?: string;
+}
 export interface RiskMetadata {
   model: string;
   scenario: string;
@@ -70,6 +76,7 @@ export interface RiskMetadata {
   summary_now: LevelCounts;
   summary_peak: LevelCounts;
   disclaimer: string;
+  dataset?: DatasetMetadata;
 }
 export interface RiskCollection {
   type: "FeatureCollection";

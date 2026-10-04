@@ -1,6 +1,7 @@
 """FastAPI entrypoint.  Run:  uvicorn app.main:app --reload  (from backend/)"""
 from __future__ import annotations
 
+import json
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -18,11 +19,23 @@ def create_app() -> FastAPI:
 
     @asynccontextmanager
     async def lifespan(app: FastAPI):
-        segments = load_segments(settings.data_dir / "pilot" / "segments.geojson")
+        segments_path = settings.data_dir / settings.segments_file
+        segments = load_segments(segments_path)
+        raw_meta = {}
+        try:
+            raw_meta = json.loads(segments_path.read_text(encoding="utf-8")).get("metadata", {})
+        except Exception:
+            pass
+        dataset_meta = {
+            "name": raw_meta.get("name", "sample" if raw_meta.get("synthetic", True) else "pilot_bengaluru"),
+            "synthetic": bool(raw_meta.get("synthetic", True)),
+            "source": str(raw_meta.get("source", raw_meta.get("note", "Synthetic sample catchment"))),
+            "notes": str(raw_meta.get("notes", raw_meta.get("note", ""))),
+        }
         scenarios = load_scenarios(settings.data_dir / "scenarios" / "rain_scenarios.json")
         player = ScenarioPlayer(scenarios, initial=settings.initial_scenario)
         app.state.player = player
-        app.state.risk_service = RiskService(segments, player)
+        app.state.risk_service = RiskService(segments, player, dataset_meta=dataset_meta)
         yield
 
     app = FastAPI(

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 import pytest
@@ -11,11 +12,12 @@ from app.services.risk.service import RiskService
 from app.services.scenario import ScenarioPlayer
 
 DATA = Path(__file__).resolve().parents[2] / "data"
+os.environ["AQUAROUTE_SEGMENTS_FILE"] = "pilot/segments_sample.geojson"
 
 
 @pytest.fixture
 def segments():
-    return load_segments(DATA / "pilot" / "segments.geojson")
+    return load_segments(DATA / "pilot" / "segments_sample.geojson")
 
 
 @pytest.fixture

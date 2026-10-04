@@ -6,6 +6,10 @@ __pycache__/
 .ruff_cache/
 node_modules/
 dist/
+cache/
+.cache/
+.osm_cache/
+*.sqlite
 # Firebase service-account keys: NEVER commit
 serviceAccount*.json
 *-firebase-adminsdk-*.json

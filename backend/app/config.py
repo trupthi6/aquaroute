@@ -13,6 +13,7 @@ class Settings:
     data_dir: Path
     cors_origins: list[str]
     initial_scenario: str
+    segments_file: str
 
 
 def get_settings() -> Settings:
@@ -21,4 +22,5 @@ def get_settings() -> Settings:
         cors_origins=[o.strip() for o in os.environ.get(
             "AQUAROUTE_CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",") if o.strip()],
         initial_scenario=os.environ.get("AQUAROUTE_INITIAL_SCENARIO", "normal"),
+        segments_file=os.environ.get("AQUAROUTE_SEGMENTS_FILE", "pilot/segments.geojson"),
     )

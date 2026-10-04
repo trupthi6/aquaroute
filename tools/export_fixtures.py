@@ -4,10 +4,13 @@ Run from the repo root:  python tools/export_fixtures.py
 """
 import json
 import sys
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
+
+os.environ["AQUAROUTE_SEGMENTS_FILE"] = "pilot/segments_sample.geojson"
 
 from fastapi.testclient import TestClient  # noqa: E402
 
