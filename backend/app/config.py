@@ -17,10 +17,11 @@ class Settings:
 
 
 def get_settings() -> Settings:
+    raw_cors = os.environ.get("AQUAROUTE_CORS_ORIGINS", "*")
+    cors = ["*"] if raw_cors.strip() == "*" else [o.strip() for o in raw_cors.split(",") if o.strip()]
     return Settings(
         data_dir=Path(os.environ.get("AQUAROUTE_DATA_DIR", REPO_ROOT / "data")),
-        cors_origins=[o.strip() for o in os.environ.get(
-            "AQUAROUTE_CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",") if o.strip()],
+        cors_origins=cors,
         initial_scenario=os.environ.get("AQUAROUTE_INITIAL_SCENARIO", "normal"),
         segments_file=os.environ.get("AQUAROUTE_SEGMENTS_FILE", "pilot/segments.geojson"),
     )
