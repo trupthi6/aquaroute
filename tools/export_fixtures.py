@@ -22,4 +22,9 @@ with TestClient(create_app()) as c:
     c.post("/api/v1/scenario", json={"scenario": "heavy_rain", "now_offset_min": 210})
     (out / "risk_response.sample.json").write_text(json.dumps(c.get("/api/v1/risk").json(), indent=1))
     (out / "risk_detail.sample.json").write_text(json.dumps(c.get("/api/v1/risk/R-008").json(), indent=1))
+
+    c.post("/api/v1/scenario", json={"scenario": "heavy_rain", "now_offset_min": 240})
+    demo = c.get("/api/v1/route/demo-trip").json()
+    route_res = c.post("/api/v1/route", json={"origin": demo["origin"], "destination": demo["destination"], "view": "peak"}).json()
+    (out / "route_response.sample.json").write_text(json.dumps(route_res, indent=1))
 print("fixtures written to", out)

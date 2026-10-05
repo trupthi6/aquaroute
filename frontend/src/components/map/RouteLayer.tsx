@@ -1,6 +1,9 @@
 /**
- * RouteLayer – draws fastest (orange) and safest (green) route polylines on the Leaflet map.
- * Uses react-leaflet Polyline components inside named Panes for correct z-order.
+ * RouteLayer – draws fastest and safest route polylines on the Leaflet map.
+ * Spec colours:
+ *   Fastest  = dark grey (#424242), dashed "6 6", weight 5
+ *   Safest   = solid blue (#1565c0), weight 5, with a white casing (weight 9) underneath
+ * Uses react-leaflet Polyline components inside a named Pane for correct z-order.
  */
 import { Pane, Polyline } from "react-leaflet";
 import type { RouteResponse } from "../../api/types";
@@ -21,17 +24,23 @@ export default function RouteLayer({ routeResult }: Props) {
 
   return (
     <Pane name="route" style={{ zIndex: 430 }}>
-      {/* Fastest – orange */}
+      {/* Fastest – dark grey dotted (spec: dark grey dotted line) */}
       <Polyline
         positions={fastCoords}
-        pathOptions={{ color: "#e65100", weight: 5, opacity: 0.85, dashArray: "8 4" }}
+        pathOptions={{ color: "#424242", weight: 5, opacity: 0.9, dashArray: "6 6" }}
       />
-      {/* Safest – green (only when it differs from fastest) */}
+      {/* Safest – white casing first, solid blue on top (spec: solid blue with white casing) */}
       {safeCoords && (
-        <Polyline
-          positions={safeCoords}
-          pathOptions={{ color: "#1b5e20", weight: 5, opacity: 0.85 }}
-        />
+        <>
+          <Polyline
+            positions={safeCoords}
+            pathOptions={{ color: "#ffffff", weight: 9, opacity: 0.85 }}
+          />
+          <Polyline
+            positions={safeCoords}
+            pathOptions={{ color: "#1565c0", weight: 5, opacity: 0.95 }}
+          />
+        </>
       )}
     </Pane>
   );

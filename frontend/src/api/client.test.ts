@@ -1,5 +1,5 @@
-import { ApiError, fetchDetail, fetchRisk, fetchScenario, postScenario } from "./client";
-import { detailFixture, riskFixture, scenarioFixture } from "../test/fixtures";
+import { ApiError, fetchDetail, fetchDemoTrip, fetchRisk, fetchScenario, postRoute, postScenario } from "./client";
+import { detailFixture, demoTripFixture, riskFixture, routeFixture, scenarioFixture } from "../test/fixtures";
 
 const ok = (body: unknown) => Promise.resolve(new Response(JSON.stringify(body), { status: 200 }));
 afterEach(() => vi.unstubAllGlobals());
@@ -58,5 +58,67 @@ describe("contract guard: fixtures from the Python backend match the TypeScript 
     expect(p.forecast_curve).toHaveLength(13);
     expect(p.factor_contributions.length).toBeGreaterThan(0);
     expect(p.static_features).toHaveProperty("elevation_m");
+  });
+});
+
+describe("routing API client – postRoute and fetchDemoTrip", () => {
+  it("postRoute POSTs to /api/v1/route and returns a RouteResponse", async () => {
+    const f = vi.fn((_url: string, _init?: RequestInit) => ok(routeFixture));
+    vi.stubGlobal("fetch", f);
+    const req = { origin: { lat: 12.915, lon: 77.6725 }, destination: { lat: 12.9215, lon: 77.6465 } };
+    const result = await postRoute(req);
+    expect(f).toHaveBeenCalledWith("/api/v1/route", expect.objectContaining({ method: "POST" }));
+    expect(result.status).toBe("OK");
+    expect(result.recommendation).toBe("SAFER_ROUTE");
+  });
+
+  it("fetchDemoTrip GETs /api/v1/route/demo-trip?view=peak by default", async () => {
+    const f = vi.fn((_url: string) => ok(demoTripFixture));
+    vi.stubGlobal("fetch", f);
+    const result = await fetchDemoTrip();
+    expect(f.mock.calls[0][0]).toBe("/api/v1/route/demo-trip?view=peak");
+    expect(result).toHaveProperty("origin");
+    expect(result).toHaveProperty("destination");
+  });
+
+  it("fetchDemoTrip forwards the view parameter", async () => {
+    const f = vi.fn((_url: string) => ok(demoTripFixture));
+    vi.stubGlobal("fetch", f);
+    await fetchDemoTrip("now");
+    expect(f.mock.calls[0][0]).toBe("/api/v1/route/demo-trip?view=now");
+  });
+});
+
+describe("contract guard: route_response.sample.json matches RouteResponse shape", () => {
+  it("has all required top-level keys", () => {
+    for (const k of ["status", "recommendation", "view", "origin", "destination", "fastest", "safest", "comparison", "reasons", "warnings", "metadata"])
+      expect(routeFixture).toHaveProperty(k);
+  });
+
+  it("fastest route has required route keys", () => {
+    for (const k of ["segment_ids", "geometry", "distance_m", "duration_s", "mean_risk", "max_risk_class", "segments_at_risk", "cost"])
+      expect(routeFixture.fastest).toHaveProperty(k);
+  });
+
+  it("fastest geometry is a LineString with coordinates", () => {
+    expect(routeFixture.fastest.geometry.type).toBe("LineString");
+    expect(routeFixture.fastest.geometry.coordinates.length).toBeGreaterThan(1);
+  });
+
+  it("safest route exists and mean_risk is lower than fastest", () => {
+    expect(routeFixture.safest).not.toBeNull();
+    expect(routeFixture.safest!.mean_risk).toBeLessThan(routeFixture.fastest.mean_risk);
+  });
+
+  it("recommendation is SAFER_ROUTE in the fixture", () => {
+    expect(routeFixture.recommendation).toBe("SAFER_ROUTE");
+  });
+
+  it("fastest route contains R-008 (the sample underpass)", () => {
+    expect(routeFixture.fastest.segment_ids).toContain("R-008");
+  });
+
+  it("safest route does not contain R-008", () => {
+    expect(routeFixture.safest!.segment_ids).not.toContain("R-008");
   });
 });
