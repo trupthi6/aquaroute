@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 
 // Dev: /api and /health are proxied to FastAPI, so the browser never hits CORS.
-const API_TARGET = process.env.VITE_API_PROXY ?? "http://localhost:8000";
+const API_TARGET = process.env.VITE_API_PROXY ?? "http://127.0.0.1:8000";
 
 export default defineConfig({
   plugins: [

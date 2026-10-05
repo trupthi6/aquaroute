@@ -1,5 +1,5 @@
 import type { DemoTripResponse, RiskCollection, RiskDetailProperties, RiskFeature, RouteResponse, ScenarioState } from "../api/types";
-import rawRisk from "./risk_response.sample.json";
+import rawRisk from "./pilot_risk.json";
 import rawRoute from "./route_response.sample.json";
 import rawDetail from "./risk_detail.sample.json";
 
