@@ -1,0 +1,189 @@
+{
+ "type": "Feature",
+ "id": "R-008",
+ "geometry": {
+  "type": "LineString",
+  "coordinates": [
+   [
+    77.653,
+    12.9215
+   ],
+   [
+    77.6595,
+    12.9215
+   ]
+  ]
+ },
+ "properties": {
+  "segment_id": "R-008",
+  "name": "Agara Underpass (sample)",
+  "kind": "underpass",
+  "risk_probability": 0.455,
+  "risk_class": "MEDIUM",
+  "risk_level": "MEDIUM",
+  "confidence": 0.84,
+  "peak_risk_probability": 0.697,
+  "peak_risk_class": "HIGH",
+  "peak_risk_level": "HIGH",
+  "peak_in_min": 45,
+  "expected_window": {
+   "start_min": 15,
+   "end_min": 75
+  },
+  "top_factors": [
+   "Moderate rainfall",
+   "Rainfall exceeds drain capacity",
+   "Low elevation within the catchment"
+  ],
+  "verified_block": false,
+  "data_freshness": {
+   "as_of": "2026-10-03T17:29:00+05:30",
+   "age_seconds": 60,
+   "state": "fresh"
+  },
+  "forecast_curve": [
+   {
+    "t_min": 0,
+    "risk_probability": 0.455,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM"
+   },
+   {
+    "t_min": 15,
+    "risk_probability": 0.601,
+    "risk_class": "HIGH",
+    "risk_level": "HIGH"
+   },
+   {
+    "t_min": 30,
+    "risk_probability": 0.661,
+    "risk_class": "HIGH",
+    "risk_level": "HIGH"
+   },
+   {
+    "t_min": 45,
+    "risk_probability": 0.697,
+    "risk_class": "HIGH",
+    "risk_level": "HIGH"
+   },
+   {
+    "t_min": 60,
+    "risk_probability": 0.673,
+    "risk_class": "HIGH",
+    "risk_level": "HIGH"
+   },
+   {
+    "t_min": 75,
+    "risk_probability": 0.482,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM"
+   },
+   {
+    "t_min": 90,
+    "risk_probability": 0.39,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM"
+   },
+   {
+    "t_min": 105,
+    "risk_probability": 0.313,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM"
+   },
+   {
+    "t_min": 120,
+    "risk_probability": 0.248,
+    "risk_class": "LOW",
+    "risk_level": "LOW"
+   },
+   {
+    "t_min": 135,
+    "risk_probability": 0.205,
+    "risk_class": "LOW",
+    "risk_level": "LOW"
+   },
+   {
+    "t_min": 150,
+    "risk_probability": 0.179,
+    "risk_class": "LOW",
+    "risk_level": "LOW"
+   },
+   {
+    "t_min": 165,
+    "risk_probability": 0.162,
+    "risk_class": "LOW",
+    "risk_level": "LOW"
+   },
+   {
+    "t_min": 180,
+    "risk_probability": 0.142,
+    "risk_class": "LOW",
+    "risk_level": "LOW"
+   }
+  ],
+  "factor_contributions": [
+   {
+    "factor": "Moderate rainfall",
+    "key": "rain_load",
+    "contribution": 0.203,
+    "share": 0.291
+   },
+   {
+    "factor": "Rainfall exceeds drain capacity",
+    "key": "drain_stress",
+    "contribution": 0.2,
+    "share": 0.287
+   },
+   {
+    "factor": "Low elevation within the catchment",
+    "key": "lowness",
+    "contribution": 0.101,
+    "share": 0.145
+   },
+   {
+    "factor": "Historical waterlogging hotspot",
+    "key": "history",
+    "contribution": 0.085,
+    "share": 0.122
+   },
+   {
+    "factor": "Underpass / local low point collects water",
+    "key": "depression",
+    "contribution": 0.075,
+    "share": 0.108
+   },
+   {
+    "factor": "Weak or distant drainage",
+    "key": "drain_deficit",
+    "contribution": 0.033,
+    "share": 0.047
+   },
+   {
+    "factor": "Close to a lake or water body",
+    "key": "water_proximity",
+    "contribution": 0.0,
+    "share": 0.0
+   },
+   {
+    "factor": "Citizen reports nearby",
+    "key": "reports",
+    "contribution": 0.0,
+    "share": 0.0
+   }
+  ],
+  "static_features": {
+   "segment_id": "R-008",
+   "name": "Agara Underpass (sample)",
+   "kind": "underpass",
+   "from_node": "N21",
+   "to_node": "N31",
+   "is_low_point": true,
+   "history_score": 0.9,
+   "drain_distance_m": 180,
+   "drain_capacity_mm_hr": 22,
+   "elevation_m": 902.1,
+   "length_m": 704,
+   "water_distance_m": 2789
+  }
+ }
+}

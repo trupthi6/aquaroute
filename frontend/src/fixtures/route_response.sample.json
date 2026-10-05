@@ -1,0 +1,185 @@
+{
+ "status": "OK",
+ "recommendation": "SAFER_ROUTE",
+ "view": "peak",
+ "origin": {
+  "lat": 12.915,
+  "lon": 77.6725,
+  "snapped_lat": 12.915,
+  "snapped_lon": 77.6725,
+  "snap_distance_m": 0.0
+ },
+ "destination": {
+  "lat": 12.9215,
+  "lon": 77.6465,
+  "snapped_lat": 12.9215,
+  "snapped_lon": 77.6465,
+  "snap_distance_m": 0.0
+ },
+ "fastest": {
+  "segment_ids": [
+   "R-036",
+   "R-010",
+   "R-009",
+   "R-008",
+   "R-007"
+  ],
+  "geometry": {
+   "type": "LineString",
+   "coordinates": [
+    [
+     77.6725,
+     12.915
+    ],
+    [
+     77.6725,
+     12.9215
+    ],
+    [
+     77.666,
+     12.9215
+    ],
+    [
+     77.6595,
+     12.9215
+    ],
+    [
+     77.653,
+     12.9215
+    ],
+    [
+     77.6465,
+     12.9215
+    ]
+   ]
+  },
+  "distance_m": 3539,
+  "duration_s": 485.0,
+  "mean_risk": 0.527,
+  "max_risk_class": "HIGH",
+  "segments_at_risk": [
+   {
+    "segment_id": "R-009",
+    "name": "Underpass approach East (sample)",
+    "risk_class": "HIGH",
+    "risk_probability": 0.574
+   },
+   {
+    "segment_id": "R-008",
+    "name": "Agara Underpass (sample)",
+    "risk_class": "HIGH",
+    "risk_probability": 0.697
+   },
+   {
+    "segment_id": "R-007",
+    "name": "Underpass approach West (sample)",
+    "risk_class": "HIGH",
+    "risk_probability": 0.539
+   }
+  ],
+  "cost": 484.96
+ },
+ "safest": {
+  "segment_ids": [
+   "R-036",
+   "R-010",
+   "R-034",
+   "R-014",
+   "R-013",
+   "R-012",
+   "R-025"
+  ],
+  "geometry": {
+   "type": "LineString",
+   "coordinates": [
+    [
+     77.6725,
+     12.915
+    ],
+    [
+     77.6725,
+     12.9215
+    ],
+    [
+     77.666,
+     12.9215
+    ],
+    [
+     77.666,
+     12.927999999999999
+    ],
+    [
+     77.6595,
+     12.927999999999999
+    ],
+    [
+     77.653,
+     12.927999999999999
+    ],
+    [
+     77.6465,
+     12.927999999999999
+    ],
+    [
+     77.6465,
+     12.9215
+    ]
+   ]
+  },
+  "distance_m": 4985,
+  "duration_s": 746.4,
+  "mean_risk": 0.375,
+  "max_risk_class": "MEDIUM",
+  "segments_at_risk": [],
+  "cost": 2628.73
+ },
+ "comparison": {
+  "extra_time_s": 261.4,
+  "extra_distance_m": 1446,
+  "high_risk_roads_avoided": 3,
+  "critical_roads_avoided": 0,
+  "mean_risk_reduction": 0.152
+ },
+ "reasons": [
+  "Fastest route crosses Underpass approach East (sample) (HIGH, 57%)",
+  "Fastest route crosses Agara Underpass (sample) (HIGH, 70%)",
+  "Fastest route crosses Underpass approach West (sample) (HIGH, 54%)"
+ ],
+ "warnings": [],
+ "metadata": {
+  "scenario": "heavy_rain",
+  "simulated_now": "2026-10-03T18:00:00+05:30",
+  "now_offset_min": 240,
+  "generated_at": "2026-10-04T05:55:01.618114+00:00",
+  "data_freshness": {
+   "as_of": "2026-10-03T17:59:00+05:30",
+   "age_seconds": 60,
+   "state": "fresh"
+  },
+  "cost_model": {
+   "alpha": 6.0,
+   "beta": 0.5,
+   "gamma": 0.3,
+   "high_mult": 4.0,
+   "speeds_kmh": {
+    "motorway": 30.0,
+    "trunk": 30.0,
+    "primary": 30.0,
+    "secondary": 30.0,
+    "motorway_link": 30.0,
+    "trunk_link": 30.0,
+    "primary_link": 30.0,
+    "secondary_link": 30.0,
+    "arterial": 30.0,
+    "tertiary": 25.0,
+    "tertiary_link": 25.0,
+    "underpass": 25.0,
+    "flyover": 35.0,
+    "residential": 20.0,
+    "unclassified": 20.0,
+    "lakeside": 20.0,
+    "default": 20.0
+   }
+  }
+ }
+}

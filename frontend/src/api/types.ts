@@ -165,3 +165,125 @@ export interface DemoTripResponse {
   destination: LatLng;
   note: string;
 }
+
+// Module 4: Smart SOS System
+export interface SensorReading {
+  timestamp_ms: number;
+  accel_x: number;
+  accel_y: number;
+  accel_z: number;
+  total_g: number;
+  gyro_alpha: number;
+  gyro_beta: number;
+  gyro_gamma: number;
+  rotation_rate_deg_s: number;
+  pitch_deg: number;
+  roll_deg: number;
+  speed_kmh: number;
+  inactivity_seconds: number;
+}
+
+export type SeverityLevel = "Minor" | "Moderate" | "Critical";
+
+export interface SeverityBreakdown {
+  impact_score: number;
+  rotation_score: number;
+  jerk_score: number;
+  speed_score: number;
+  inactivity_score: number;
+}
+
+export interface HospitalInfo {
+  id: string;
+  name: string;
+  distance_km: number;
+  address: string;
+  emergency_phone: string;
+  coordinates: { lat: number; lon: number };
+  trauma_care_level: "Level 1" | "Level 2" | "Level 3";
+  available_ambulances: number;
+  estimated_arrival_min: number;
+}
+
+export interface AccidentEvaluationRequest {
+  reading?: SensorReading;
+  impact_force_g: number;
+  max_rotation_deg_s: number;
+  tilt_angle_deg: number;
+  pre_impact_speed_kmh: number;
+  inactivity_seconds: number;
+  location: { lat: number; lon: number };
+}
+
+export interface AccidentEvaluationResponse {
+  severity_score: number;
+  severity_level: SeverityLevel;
+  trigger_sos: boolean;
+  breakdown: SeverityBreakdown;
+  nearby_hospitals: HospitalInfo[];
+  recommended_action: string;
+  dispatch_log: string[];
+}
+
+export interface EmergencyContact {
+  name: string;
+  phone: string;
+  relation: string;
+}
+
+export interface SOSTriggerRequest {
+  location: { lat: number; lon: number };
+  severity_score: number;
+  severity_level: SeverityLevel;
+  contacts?: EmergencyContact[];
+  auto_detected?: boolean;
+  incident_type?: string;
+  message_override?: string;
+}
+
+export interface SOSTriggerResponse {
+  sos_id: string;
+  status: "DISPATCHED" | "PENDING" | "CANCELLED";
+  timestamp: string;
+  severity_level: string;
+  severity_score: number;
+  location: { lat: number; lon: number };
+  simulated_sms_sent: Array<{
+    recipient_name: string;
+    recipient_phone: string;
+    relation: string;
+    status: string;
+    message: string;
+  }>;
+  hospital_alert_sent: {
+    hospital_id: string;
+    hospital_name: string;
+    emergency_phone: string;
+    distance_km: number;
+    eta_min: number;
+    trauma_team_alerted: boolean;
+    dispatch_status: string;
+  };
+  logs: string[];
+}
+
+// Module 5: Offline Resilience
+export type NetworkQuality = "good" | "weak" | "offline";
+
+export interface OfflinePackageMetadata {
+  version: string;
+  generated_at: string;
+  catchment: string;
+  bbox: number[];
+  total_segments: number;
+  package_size_kb: number;
+  description: string;
+}
+
+export interface OfflinePackage {
+  metadata: OfflinePackageMetadata;
+  segments_geojson: Record<string, unknown>;
+  current_risk: RiskCollection;
+  key_safe_routes: RouteResponse[];
+  emergency_hospitals: HospitalInfo[];
+}

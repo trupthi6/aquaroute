@@ -5,6 +5,10 @@
 import { useState } from "react";
 import { ApiError, fetchDemoTrip, postRoute } from "../api/client";
 import type { LatLng, RouteResponse, ViewMode } from "../api/types";
+import { fallbackDemoTrip } from "../fixtures/mockData";
+
+import { computeOfflineRoute } from "../lib/offlineRouting";
+import { networkMonitor } from "../lib/networkMonitor";
 
 interface Props {
   view: ViewMode;
@@ -45,8 +49,11 @@ export default function RoutePanel({ view, onRouteResult }: Props) {
       setOLon(String(demo.origin.lon));
       setDLat(String(demo.destination.lat));
       setDLon(String(demo.destination.lon));
-    } catch (e) {
-      setError(e instanceof ApiError ? e.message : "Failed to load demo trip");
+    } catch {
+      setOLat(String(fallbackDemoTrip.origin.lat));
+      setOLon(String(fallbackDemoTrip.origin.lon));
+      setDLat(String(fallbackDemoTrip.destination.lat));
+      setDLon(String(fallbackDemoTrip.destination.lon));
     } finally {
       setDemoLoading(false);
     }
@@ -56,17 +63,33 @@ export default function RoutePanel({ view, onRouteResult }: Props) {
     if (!canRoute) return;
     setBusy(true);
     setError(null);
+    const origin: LatLng = { lat: Number(oLat), lon: Number(oLon) };
+    const destination: LatLng = { lat: Number(dLat), lon: Number(dLon) };
+
+    const isOffline = !networkMonitor.getState().online || networkMonitor.getState().quality === "offline";
+    if (isOffline) {
+      const offlineRes = computeOfflineRoute({ origin, destination, view });
+      setResult(offlineRes);
+      onRouteResult(offlineRes);
+      setBusy(false);
+      return;
+    }
+
     try {
-      const origin: LatLng = { lat: Number(oLat), lon: Number(oLon) };
-      const destination: LatLng = { lat: Number(dLat), lon: Number(dLon) };
       const res = await postRoute({ origin, destination, view });
       setResult(res);
       onRouteResult(res);
     } catch (e) {
-      const msg = e instanceof ApiError ? e.message : "Route computation failed";
-      setError(msg);
-      setResult(null);
-      onRouteResult(null);
+      if (e instanceof ApiError && e.status >= 400 && e.status < 500) {
+        setError(e.message);
+        setResult(null);
+        onRouteResult(null);
+      } else {
+        // Fallback to client-side offline route computation on network failure
+        const offlineRes = computeOfflineRoute({ origin, destination, view });
+        setResult(offlineRes);
+        onRouteResult(offlineRes);
+      }
     } finally {
       setBusy(false);
     }

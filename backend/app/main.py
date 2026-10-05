@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from .config import get_settings
 from .core.data_loader import load_scenarios, load_segments
-from .routers import risk, routing, scenario
+from .routers import offline, risk, routing, scenario, sos
 from .services.risk.service import RiskService
 from .services.routing import RouteEngine
 from .services.scenario import ScenarioPlayer
@@ -44,7 +44,7 @@ def create_app() -> FastAPI:
     app = FastAPI(
         title="AquaRoute API",
         version="0.1.0",
-        description="Urban flood nowcasting & safe routing for SIH26085. Modules 1-3.",
+        description="Urban flood nowcasting, safe routing, smart SOS & offline resilience for SIH26085. Modules 1-5.",
         lifespan=lifespan,
     )
     app.add_middleware(CORSMiddleware, allow_origins=settings.cors_origins,
@@ -52,6 +52,8 @@ def create_app() -> FastAPI:
     app.include_router(risk.router)
     app.include_router(scenario.router)
     app.include_router(routing.router)
+    app.include_router(sos.router)
+    app.include_router(offline.router)
 
     @app.get("/health", tags=["meta"])
     def health():

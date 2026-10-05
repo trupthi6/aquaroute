@@ -1,0 +1,1665 @@
+{
+ "type": "FeatureCollection",
+ "metadata": {
+  "model": "rule_based_v1",
+  "scenario": "heavy_rain",
+  "scenario_description": "Intense cloudburst-style event peaking around +240 min.",
+  "simulated_now": "2026-10-03T17:30:00+05:30",
+  "now_offset_min": 210,
+  "horizon_min": 180,
+  "generated_at": "2026-10-04T05:55:01.593200+00:00",
+  "segment_count": 38,
+  "summary_now": {
+   "LOW": 23,
+   "MEDIUM": 15,
+   "HIGH": 0
+  },
+  "summary_peak": {
+   "LOW": 2,
+   "MEDIUM": 23,
+   "HIGH": 13
+  },
+  "disclaimer": "Risk estimate for decision support; an uncalibrated index, not a guarantee.",
+  "dataset": {
+   "name": "sample",
+   "synthetic": true,
+   "source": "Synthetic sample catchment for AquaRoute Module 1. Not real survey data.",
+   "notes": "Synthetic sample catchment for AquaRoute Module 1. Not real survey data."
+  }
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "id": "R-001",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.64,
+      12.915
+     ],
+     [
+      77.6465,
+      12.915
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-001",
+    "name": "Sample Road R-001",
+    "kind": "residential",
+    "risk_probability": 0.225,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.443,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 45,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Weak or distant drainage"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-002",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6465,
+      12.915
+     ],
+     [
+      77.653,
+      12.915
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-002",
+    "name": "Sample Road R-002",
+    "kind": "residential",
+    "risk_probability": 0.29,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.491,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 45,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Weak or distant drainage"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-003",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.653,
+      12.915
+     ],
+     [
+      77.6595,
+      12.915
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-003",
+    "name": "Sample Road R-003",
+    "kind": "residential",
+    "risk_probability": 0.193,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.407,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 30,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-004",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6595,
+      12.915
+     ],
+     [
+      77.666,
+      12.915
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-004",
+    "name": "Sample Road R-004",
+    "kind": "residential",
+    "risk_probability": 0.216,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.438,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 30,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-005",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.666,
+      12.915
+     ],
+     [
+      77.6725,
+      12.915
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-005",
+    "name": "Sample Road R-005",
+    "kind": "residential",
+    "risk_probability": 0.365,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.82,
+    "peak_risk_probability": 0.562,
+    "peak_risk_class": "HIGH",
+    "peak_risk_level": "HIGH",
+    "peak_in_min": 45,
+    "expected_window": {
+     "start_min": 30,
+     "end_min": 75
+    },
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-006",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.64,
+      12.9215
+     ],
+     [
+      77.6465,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-006",
+    "name": "Sample Road R-006",
+    "kind": "arterial",
+    "risk_probability": 0.174,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.342,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 30,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-007",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6465,
+      12.9215
+     ],
+     [
+      77.653,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-007",
+    "name": "Underpass approach West (sample)",
+    "kind": "arterial",
+    "risk_probability": 0.299,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.82,
+    "peak_risk_probability": 0.539,
+    "peak_risk_class": "HIGH",
+    "peak_risk_level": "HIGH",
+    "peak_in_min": 45,
+    "expected_window": {
+     "start_min": 30,
+     "end_min": 60
+    },
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Historical waterlogging hotspot"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-008",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.653,
+      12.9215
+     ],
+     [
+      77.6595,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-008",
+    "name": "Agara Underpass (sample)",
+    "kind": "underpass",
+    "risk_probability": 0.455,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.84,
+    "peak_risk_probability": 0.697,
+    "peak_risk_class": "HIGH",
+    "peak_risk_level": "HIGH",
+    "peak_in_min": 45,
+    "expected_window": {
+     "start_min": 15,
+     "end_min": 75
+    },
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-009",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6595,
+      12.9215
+     ],
+     [
+      77.666,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-009",
+    "name": "Underpass approach East (sample)",
+    "kind": "arterial",
+    "risk_probability": 0.323,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.82,
+    "peak_risk_probability": 0.574,
+    "peak_risk_class": "HIGH",
+    "peak_risk_level": "HIGH",
+    "peak_in_min": 45,
+    "expected_window": {
+     "start_min": 30,
+     "end_min": 60
+    },
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-010",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.666,
+      12.9215
+     ],
+     [
+      77.6725,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-010",
+    "name": "Sample Road R-010",
+    "kind": "arterial",
+    "risk_probability": 0.241,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.415,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 45,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Low elevation within the catchment",
+     "Rainfall exceeds drain capacity"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-011",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.64,
+      12.927999999999999
+     ],
+     [
+      77.6465,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-011",
+    "name": "Sample Road R-011",
+    "kind": "residential",
+    "risk_probability": 0.221,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.447,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 45,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-012",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6465,
+      12.927999999999999
+     ],
+     [
+      77.653,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-012",
+    "name": "Flyover Deck A (sample)",
+    "kind": "flyover",
+    "risk_probability": 0.137,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.23,
+    "peak_risk_class": "LOW",
+    "peak_risk_level": "LOW",
+    "peak_in_min": 30,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-013",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.653,
+      12.927999999999999
+     ],
+     [
+      77.6595,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-013",
+    "name": "Flyover Deck B (sample)",
+    "kind": "flyover",
+    "risk_probability": 0.144,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.24,
+    "peak_risk_class": "LOW",
+    "peak_risk_level": "LOW",
+    "peak_in_min": 30,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-014",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6595,
+      12.927999999999999
+     ],
+     [
+      77.666,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-014",
+    "name": "Sample Road R-014",
+    "kind": "residential",
+    "risk_probability": 0.247,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.479,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 45,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-015",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.666,
+      12.927999999999999
+     ],
+     [
+      77.6725,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-015",
+    "name": "Sample Road R-015",
+    "kind": "residential",
+    "risk_probability": 0.281,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.82,
+    "peak_risk_probability": 0.536,
+    "peak_risk_class": "HIGH",
+    "peak_risk_level": "HIGH",
+    "peak_in_min": 45,
+    "expected_window": {
+     "start_min": 30,
+     "end_min": 60
+    },
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-016",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.64,
+      12.9345
+     ],
+     [
+      77.6465,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-016",
+    "name": "Sample Road R-016",
+    "kind": "residential",
+    "risk_probability": 0.199,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.392,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 30,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-017",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6465,
+      12.9345
+     ],
+     [
+      77.653,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-017",
+    "name": "Sample Road R-017",
+    "kind": "residential",
+    "risk_probability": 0.327,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.82,
+    "peak_risk_probability": 0.526,
+    "peak_risk_class": "HIGH",
+    "peak_risk_level": "HIGH",
+    "peak_in_min": 45,
+    "expected_window": {
+     "start_min": 30,
+     "end_min": 60
+    },
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-018",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.653,
+      12.9345
+     ],
+     [
+      77.6595,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-018",
+    "name": "Sample Road R-018",
+    "kind": "residential",
+    "risk_probability": 0.218,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.38,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 45,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Low elevation within the catchment",
+     "Rainfall exceeds drain capacity"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-019",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6595,
+      12.9345
+     ],
+     [
+      77.666,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-019",
+    "name": "Sample Road R-019",
+    "kind": "residential",
+    "risk_probability": 0.273,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.82,
+    "peak_risk_probability": 0.525,
+    "peak_risk_class": "HIGH",
+    "peak_risk_level": "HIGH",
+    "peak_in_min": 30,
+    "expected_window": {
+     "start_min": 30,
+     "end_min": 60
+    },
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-020",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.666,
+      12.9345
+     ],
+     [
+      77.6725,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-020",
+    "name": "Lakeside Road North (sample)",
+    "kind": "lakeside",
+    "risk_probability": 0.373,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.84,
+    "peak_risk_probability": 0.615,
+    "peak_risk_class": "HIGH",
+    "peak_risk_level": "HIGH",
+    "peak_in_min": 45,
+    "expected_window": {
+     "start_min": 15,
+     "end_min": 75
+    },
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-021",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.64,
+      12.915
+     ],
+     [
+      77.64,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-021",
+    "name": "Sample Road R-021",
+    "kind": "residential",
+    "risk_probability": 0.161,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.302,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 30,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Weak or distant drainage"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-022",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.64,
+      12.9215
+     ],
+     [
+      77.64,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-022",
+    "name": "Sample Road R-022",
+    "kind": "residential",
+    "risk_probability": 0.187,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.4,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 30,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Weak or distant drainage"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-023",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.64,
+      12.927999999999999
+     ],
+     [
+      77.64,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-023",
+    "name": "Sample Road R-023",
+    "kind": "residential",
+    "risk_probability": 0.174,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.374,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 30,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-024",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6465,
+      12.915
+     ],
+     [
+      77.6465,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-024",
+    "name": "Sample Road R-024",
+    "kind": "residential",
+    "risk_probability": 0.199,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.421,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 30,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-025",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6465,
+      12.9215
+     ],
+     [
+      77.6465,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-025",
+    "name": "Sample Road R-025",
+    "kind": "residential",
+    "risk_probability": 0.191,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.352,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 45,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-026",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6465,
+      12.927999999999999
+     ],
+     [
+      77.6465,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-026",
+    "name": "Sample Road R-026",
+    "kind": "residential",
+    "risk_probability": 0.223,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.449,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 30,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-027",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.653,
+      12.915
+     ],
+     [
+      77.653,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-027",
+    "name": "Sample Road R-027",
+    "kind": "residential",
+    "risk_probability": 0.215,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.442,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 30,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-028",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.653,
+      12.9215
+     ],
+     [
+      77.653,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-028",
+    "name": "Sample Road R-028",
+    "kind": "residential",
+    "risk_probability": 0.278,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.82,
+    "peak_risk_probability": 0.533,
+    "peak_risk_class": "HIGH",
+    "peak_risk_level": "HIGH",
+    "peak_in_min": 45,
+    "expected_window": {
+     "start_min": 30,
+     "end_min": 60
+    },
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-029",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.653,
+      12.927999999999999
+     ],
+     [
+      77.653,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-029",
+    "name": "Sample Road R-029",
+    "kind": "residential",
+    "risk_probability": 0.215,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.387,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 45,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Low elevation within the catchment",
+     "Rainfall exceeds drain capacity"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-030",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6595,
+      12.915
+     ],
+     [
+      77.6595,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-030",
+    "name": "Sample Road R-030",
+    "kind": "residential",
+    "risk_probability": 0.294,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.82,
+    "peak_risk_probability": 0.53,
+    "peak_risk_class": "HIGH",
+    "peak_risk_level": "HIGH",
+    "peak_in_min": 45,
+    "expected_window": {
+     "start_min": 30,
+     "end_min": 60
+    },
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-031",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6595,
+      12.9215
+     ],
+     [
+      77.6595,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-031",
+    "name": "Sample Road R-031",
+    "kind": "residential",
+    "risk_probability": 0.235,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.466,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 30,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-032",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6595,
+      12.927999999999999
+     ],
+     [
+      77.6595,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-032",
+    "name": "Sample Road R-032",
+    "kind": "residential",
+    "risk_probability": 0.22,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.39,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 45,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Low elevation within the catchment",
+     "Rainfall exceeds drain capacity"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-033",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.666,
+      12.915
+     ],
+     [
+      77.666,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-033",
+    "name": "Sample Road R-033",
+    "kind": "residential",
+    "risk_probability": 0.339,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.82,
+    "peak_risk_probability": 0.544,
+    "peak_risk_class": "HIGH",
+    "peak_risk_level": "HIGH",
+    "peak_in_min": 45,
+    "expected_window": {
+     "start_min": 30,
+     "end_min": 75
+    },
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-034",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.666,
+      12.9215
+     ],
+     [
+      77.666,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-034",
+    "name": "Sample Road R-034",
+    "kind": "residential",
+    "risk_probability": 0.25,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.489,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 30,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-035",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.666,
+      12.927999999999999
+     ],
+     [
+      77.666,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-035",
+    "name": "Sample Road R-035",
+    "kind": "residential",
+    "risk_probability": 0.349,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.84,
+    "peak_risk_probability": 0.597,
+    "peak_risk_class": "HIGH",
+    "peak_risk_level": "HIGH",
+    "peak_in_min": 45,
+    "expected_window": {
+     "start_min": 15,
+     "end_min": 75
+    },
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-036",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6725,
+      12.915
+     ],
+     [
+      77.6725,
+      12.9215
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-036",
+    "name": "Sample Road R-036",
+    "kind": "residential",
+    "risk_probability": 0.234,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.416,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 45,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Low elevation within the catchment",
+     "Rainfall exceeds drain capacity"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-037",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6725,
+      12.9215
+     ],
+     [
+      77.6725,
+      12.927999999999999
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-037",
+    "name": "Sample Road R-037",
+    "kind": "residential",
+    "risk_probability": 0.246,
+    "risk_class": "LOW",
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "peak_risk_probability": 0.454,
+    "peak_risk_class": "MEDIUM",
+    "peak_risk_level": "MEDIUM",
+    "peak_in_min": 45,
+    "expected_window": null,
+    "top_factors": [
+     "Moderate rainfall",
+     "Low elevation within the catchment",
+     "Rainfall exceeds drain capacity"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "R-038",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      77.6725,
+      12.927999999999999
+     ],
+     [
+      77.6725,
+      12.9345
+     ]
+    ]
+   },
+   "properties": {
+    "segment_id": "R-038",
+    "name": "Lakeside Road East (sample)",
+    "kind": "lakeside",
+    "risk_probability": 0.38,
+    "risk_class": "MEDIUM",
+    "risk_level": "MEDIUM",
+    "confidence": 0.84,
+    "peak_risk_probability": 0.625,
+    "peak_risk_class": "HIGH",
+    "peak_risk_level": "HIGH",
+    "peak_in_min": 45,
+    "expected_window": {
+     "start_min": 15,
+     "end_min": 75
+    },
+    "top_factors": [
+     "Moderate rainfall",
+     "Rainfall exceeds drain capacity",
+     "Low elevation within the catchment"
+    ],
+    "verified_block": false,
+    "data_freshness": {
+     "as_of": "2026-10-03T17:29:00+05:30",
+     "age_seconds": 60,
+     "state": "fresh"
+    }
+   }
+  }
+ ]
+}
